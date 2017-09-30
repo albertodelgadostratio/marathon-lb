@@ -83,7 +83,6 @@ listen stats
   balance
   mode http
   stats enable
-  option dontlog-normal
   monitor-uri /_haproxy_health_check
   acl getpid path /_haproxy_getpids
   http-request use-service lua.getpids if getpid

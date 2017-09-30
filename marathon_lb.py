@@ -672,6 +672,8 @@ def reloadConfig():
                 #     subprocess.check_call(forceRestartCommand,
                 #                           close_fds=True)
                 time.sleep(0.1)
+            new_pids = get_haproxy_pids()
+            logger.debug("new pids: [%s]", )
             logger.debug("reload finished, took %s seconds",
                          time.time() - start_time)
         except OSError as ex:
